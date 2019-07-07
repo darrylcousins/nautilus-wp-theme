@@ -20,39 +20,71 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'nautilus' ); ?></a>
+<body <?php body_class("pushable"); ?>>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$nautilus_description = get_bloginfo( 'description', 'display' );
-			if ( $nautilus_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $nautilus_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+<!-- Sidebar menu -->
+<?php
+	$menu_name = 'header-menu'; // this is the registered menu name
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'nautilus' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) :
+		$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+		$menu_items = wp_get_nav_menu_items($menu->term_id);
+		echo '<div id="sidebar" class="ui vertical sidebar left inverted menu">';
+		foreach ( (array) $menu_items as $key => $menu_item ) :
+			$title = $menu_item->title;
+			$url = $menu_item->url;
+			$class = $menu_item->classes; // get array with class names
+			if ( get_the_ID() == $menu_item->object_id ) { // check for current page
+				echo '<a class="item active" href="' . $url . '">';
+			} else {
+				echo '<a class="item" href="' . $url . '">';
+			}
+			echo $title;
+			echo '</a>';
+		endforeach;
+		echo '</div>';
+	else :
+		echo '<div class="ui error message"><p>Menu "' . $menu_name . '" not defined.</p></div>';
+	endif;
+?>
+<!-- Following menu -->
+<?php
+	$menu_name = 'header-menu'; // this is the registered menu name
 
-	<div id="content" class="site-content">
+	if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) :
+		$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+		$menu_items = wp_get_nav_menu_items($menu->term_id);
+		echo '<div class="ui fixed inverted menu">';
+		echo '<div class="ui container">';
+		echo '<a id="toc" class="toc item"><i class="sidebar icon"></i></a>';
+		foreach ( (array) $menu_items as $key => $menu_item ) :
+			$title = $menu_item->title;
+			$url = $menu_item->url;
+			$class = $menu_item->classes; // get array with class names
+			if ( get_the_ID() == $menu_item->object_id ) { // check for current page
+				echo '<a class="item active" href="' . $url . '">';
+			} else {
+				echo '<a class="item" href="' . $url . '">';
+			}
+			echo $title;
+			echo '</a>';
+		endforeach;
+		echo '<div class="right menu">';
+		echo '<div class="item">';
+		echo '<div class="ui icon inverted transparent input">';
+		echo '<input type="text" placeholder="Search...">';
+		echo '<i class="search link icon"></i>';
+		echo '</div></div></div>';
+		echo '</div></div>';
+	else :
+		echo '<div class="ui error message"><p>Menu "' . $menu_name . '" not defined.</p></div>';
+	endif;
+?>
+
+<div class="pusher">
+	<div id="content" class="ui main text container" style="margin-top: 100px">
+		<?php
+			$color = "red";
+	                $scale = 0.5;
+			include get_template_directory() . '/icon.php';
+		?>

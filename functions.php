@@ -44,7 +44,7 @@ if ( ! function_exists( 'nautilus_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'nautilus' ),
+			'header-menu' => esc_html__( 'Primary', 'nautilus' ),
 		) );
 
 		/*
@@ -120,6 +120,13 @@ add_action( 'widgets_init', 'nautilus_widgets_init' );
  * Enqueue scripts and styles.
  */
 function nautilus_scripts() {
+
+	wp_enqueue_style( 'semantic-style', get_template_directory_uri() . '/semantic-ui/semantic.min.css' );
+
+	wp_enqueue_style( 'nautilus-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'semantic-script', get_template_directory_uri() . '/semantic-ui/semantic.min.js', array('jquery'), false, true );
+/*
 	wp_enqueue_style( 'nautilus-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'nautilus-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -129,6 +136,7 @@ function nautilus_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+*/
 }
 add_action( 'wp_enqueue_scripts', 'nautilus_scripts' );
 

@@ -45,6 +45,7 @@ if ( ! function_exists( 'nautilus_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'header-menu' => esc_html__( 'Primary', 'nautilus' ),
+			'footer-menu' => esc_html__( 'Footer', 'nautilus' ),
 		) );
 
 		/*

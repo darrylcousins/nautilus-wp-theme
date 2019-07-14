@@ -8,18 +8,43 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: nautilus
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 
 nautilus-wp-theme is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
+/* Base link color */
+.link {
+  color: #CD7F32;
+}
+.link .icon {
+  margin-left: 1em;
+}
+.link:hover {
+  color: #CDA632;
+}
+/* make things small */
+.tiny {
+  font-size: 0.9rem;
+}
+/* page branding header */
+.pageheader {
+  font-size: 3rem;
+}
+/* page branding subheader */
+.subheader {
+  font-size: 2rem;
+  color: #72A0C1 !important;
+}
+/* Page h1 header container */
+.entry-header {
+  padding-top: 2em;
+}
+/* change active highlight in primary menu */
+.ui.inverted.menu .active.item {
+  background: transparent !important;
+  text-decoration: underline;
+}
 /* drop our fixed menu beneath admin-bar if admin user */
 .admin-bar .ui.fixed.menu {
   top: 46px;

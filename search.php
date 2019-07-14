@@ -15,14 +15,25 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'nautilus' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
+    <header class="entry-header">
+      <h1 class="ui center aligned header huge">
+        <?php
+        /* translators: %s: search query. */
+        //printf( esc_html__( 'Search Results for: %s', 'nautilus' ), '<span>' . get_search_query() . '</span>' );
+        echo "Search results for: ";
+        echo get_search_query();
+        ?>
+      </h1>
+    </header>
+
+      <div class="ui horizontal divider">
+        <?php
+          $color = "#343434";
+          $scale = 0.3;
+          include get_template_directory() . '/icon.php';
+        ?>
+      </div>
+
 
 			<?php
 			/* Start the Loop */

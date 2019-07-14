@@ -71,10 +71,14 @@
 		endforeach;
 		echo '<div class="right menu">';
 		echo '<div class="item">';
+		echo '<form role="search" method="get" id="searchform" action="/">';
 		echo '<div class="ui icon inverted transparent input">';
-		echo '<input type="text" placeholder="Search...">';
+		echo '<input type="text" name="s" id="s" placeholder="Search...">';
 		echo '<i class="search link icon"></i>';
-		echo '</div></div></div>';
+		echo '</div>';
+		echo '</form>';
+		//echo get_search_form();
+		echo '</div></div>';
 		echo '</div></div>';
 	else :
 		echo '<div class="ui error message"><p>Menu "' . $menu_name . '" not defined.</p></div>';
@@ -82,9 +86,32 @@
 ?>
 
 <div class="pusher">
-	<div id="content" class="ui main text container" style="margin-top: 100px">
-		<?php
-			$color = "red";
-	                $scale = 0.5;
-			include get_template_directory() . '/icon.php';
-		?>
+  <div class="ui inverted vertical center aligned segment" style="padding-top: 65px">
+    <div id="branding" class="ui container">
+      <h1 class="ui huge inverted left aligned header">
+	<?php
+	  $color = "#fafafa";
+	  $scale = 1;
+	  include get_template_directory() . '/icon.php';
+	?>
+	<div class="pageheader content">
+          <?php echo get_bloginfo('name'); ?>
+	  <div class="subheader sub header">
+	    <?php echo get_bloginfo('description'); ?>
+	  </div>
+	  <div class="sub header">
+	    <a class="link tiny" href="mailto:rope@nautilusbraids.co.nz">
+	      <i class="mail icon"></i>
+              rope@nautilusbraids.co.nz
+            </a>
+	    <a class="link tiny" href="tel:033295857">
+	      <i class="phone icon"></i>
+              03 329 5857
+            </a>
+	  </div>
+	</div>
+      </h1>
+    </div>
+  </div>
+
+  <div id="content" class="ui main text container">

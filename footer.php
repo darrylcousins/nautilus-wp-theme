@@ -14,9 +14,34 @@
 	</div><!-- #content -->
 	</div><!-- #pusher -->
 
-	<footer id="colophon" class="site-footer">
+<div class="ui inverted vertical segment">
+<?php
+	$menu_name = 'footer-menu'; // this is the registered menu name
+
+	if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) :
+		$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+		$menu_items = wp_get_nav_menu_items($menu->term_id);
+		echo '<div class="ui inverted menu">';
+		foreach ( (array) $menu_items as $key => $menu_item ) :
+			$title = $menu_item->title;
+			$url = $menu_item->url;
+			$class = $menu_item->classes; // get array with class names
+			if ( get_the_ID() == $menu_item->object_id ) { // check for current page
+				echo '<a class="item active" href="' . $url . '">';
+			} else {
+				echo '<a class="item" href="' . $url . '">';
+			}
+			echo $title;
+			echo '</a>';
+		endforeach;
+		echo '</div>';
+	else :
+		echo '<div class="ui error message"><p>Menu "' . $menu_name . '" not defined.</p></div>';
+	endif;
+?>
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'nautilus' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'nautilus' ) ); ?>"
+			   class="link">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
 				printf( esc_html__( 'Proudly powered by %s', 'nautilus' ), 'WordPress' );
@@ -25,18 +50,21 @@
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'nautilus' ), 'nautilus', '<a href="https://github.com/darrylcousins">Darryl Cousins</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'nautilus' ), 'nautilus', '<a class="link" href="https://github.com/darrylcousins">Darryl Cousins</a>' );
 				?>
 		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+</div>
 
 <?php wp_footer(); ?>
 
 <script type="text/javascript">
 jQuery(document).ready(function () {
-	jQuery('.ui.sidebar').sidebar('attach events', '.toc.item');
-console.log('code ran');
-	});
+  jQuery('.ui.sidebar').sidebar('attach events', '.toc.item');
+  jQuery('.search.link.icon').click(function() {
+    var form = jQuery('form#searchform');
+    form.submit();
+  });
+});
 </script>
 
 <!--

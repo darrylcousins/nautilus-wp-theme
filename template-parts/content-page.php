@@ -10,9 +10,18 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+    <header class="entry-header">
+      <?php if ( !is_front_page() ) : ?>
+          <?php the_title( '<h1 class="ui center aligned header huge">', '</h1>' ); ?>
+      <?php endif; ?>
+    </header><!-- .entry-header -->
+    <div class="ui horizontal divider">
+      <?php
+        $color = "#343434";
+        $scale = 0.3;
+        include get_template_directory() . '/icon.php';
+      ?>
+    </div>
 
 	<?php nautilus_post_thumbnail(); ?>
 
@@ -26,6 +35,14 @@
 		) );
 		?>
 	</div><!-- .entry-content -->
+
+  <div class="ui horizontal divider">
+    <?php
+      $color = "#343434";
+      $scale = 0.3;
+      include get_template_directory() . '/icon.php';
+    ?>
+  </div>
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">

@@ -31,10 +31,13 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 .pageheader {
   font-size: 3rem;
 }
+/* page branding blue */
+.nautilusblue {
+  color: #72A0C1 !important;
+}
 /* page branding subheader */
 .subheader {
   font-size: 2rem;
-  color: #72A0C1 !important;
 }
 /* Page h1 header container */
 .entry-header {

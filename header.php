@@ -96,7 +96,7 @@
 	?>
 	<div class="pageheader content">
           <?php echo get_bloginfo('name'); ?>
-	  <div class="subheader sub header">
+	  <div class="subheader sub header nautilusblue">
 	    <?php echo get_bloginfo('description'); ?>
 	  </div>
 	  <div class="sub header">

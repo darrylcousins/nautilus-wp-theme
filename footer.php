@@ -39,18 +39,19 @@
 		echo '<div class="ui error message"><p>Menu "' . $menu_name . '" not defined.</p></div>';
 	endif;
 ?>
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'nautilus' ) ); ?>"
-			   class="link">
+		<div class="ui container site-info">
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'nautilus' ), 'WordPress' );
+				printf( esc_html__( 'Powered by ', 'nautilus' ));
 				?>
-			</a>
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'nautilus' ) ); ?>"
+			   class="link">WordPress</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'nautilus' ), 'nautilus', '<a class="link" href="https://github.com/darrylcousins">Darryl Cousins</a>' );
+          printf( esc_html__( 'Theme: %1$s by %2$s.', 'nautilus' ),
+            '<a class="nautilusblue" href="https://github.com/darrylcousins/nautilus-wp-theme">Nautilus</a>',
+            '<a class="link" href="https://github.com/darrylcousins">Darryl Cousins</a>'
+          );
 				?>
 		</div><!-- .site-info -->
 </div>

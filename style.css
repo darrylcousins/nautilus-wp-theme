@@ -19,6 +19,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 .link .icon {
   margin-left: 1em;
+  margin-right: 0.25rem !important;
 }
 .link:hover {
   color: #CDA632;
@@ -27,17 +28,58 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 .tiny {
   font-size: 0.9rem;
 }
+/* page branding icon */
+.ui.header>.icon.large {
+  display: none;
+}
+@media screen and (min-width: 783px) {
+  .ui.header>.icon.large {
+    display: table-cell;
+  }
+}
+.ui.header>.icon.small {
+  display: table-cell;
+}
+@media screen and (min-width: 783px) {
+  .ui.header>.icon.small {
+    display: none;
+  }
+}
 /* page branding header */
 .pageheader {
-  font-size: 3rem;
+  font-size: 2rem;
+}
+@media screen and (min-width: 783px) {
+  .pageheader {
+    font-size: 3rem;
+  }
 }
 /* page branding blue */
 .nautilusblue {
   color: #72A0C1 !important;
 }
 /* page branding subheader */
+.sub.header {
+  font-size: 0.7rem !important;
+}
+@media screen and (min-width: 783px) {
+  .sub.header {
+    font-size: 1rem !important;
+  }
+}
+/* page branding subheader menu */
 .subheader {
-  font-size: 2rem;
+  margin-top: -20px;
+  margin-left: -7px;
+}
+.subheader .link.menu {
+  font-size: 0.5rem;
+}
+@media screen and (min-width: 783px) {
+  .subheader .link.menu {
+    display: inline;
+    font-size: .8rem;
+  }
 }
 /* Page h1 header container */
 .entry-header {

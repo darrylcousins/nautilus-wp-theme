@@ -146,3 +146,26 @@ if ( ! function_exists( 'nautilus_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+if ( ! function_exists( 'nautilus_search_form' ) ) :
+	/**
+	 * Displays search form
+	 *
+	 */
+	function nautilus_search_form() {
+
+    ?>
+		<div class="right menu">
+      <div class="item">
+        <form role="search" method="get" id="searchform" action="/">
+          <div class="ui icon inverted transparent input">
+            <input type="text" name="s" id="s" placeholder="Search...">
+            <i class="search link icon"></i>
+          </div>
+        </form>
+      </div>
+    </div>
+		<?php
+
+	}
+endif;

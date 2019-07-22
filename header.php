@@ -43,8 +43,8 @@
 			echo $title;
 			echo '</a>';
 		endforeach;
-    echo '<a class="item" href="contact"><i class="linkify icon"></i>Contact</a>';
-    echo '<a class="item" href="signin"><i class="sign in icon"></i>Sign In</a>';
+    echo '<a class="item" href="/404.php"><i class="linkify icon"></i>Contact</a>';
+    echo '<a class="item" href="/404.php"><i class="sign in icon"></i>Sign In</a>';
 		echo '</div>';
 	else :
 		echo '<div class="ui error message"><p>Menu "' . $menu_name . '" not defined.</p></div>';

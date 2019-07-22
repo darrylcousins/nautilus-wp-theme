@@ -164,7 +164,7 @@ if ( ! function_exists( 'nautilus_search_form' ) ) :
           </div>
         </form>
       </div>
-      <a class="item" href="signin"><i class="sign in icon"></i>Sign In</a>
+      <a class="item" href="/404.php"><i class="sign in icon"></i>Sign In</a>
     </div>
 		<?php
 

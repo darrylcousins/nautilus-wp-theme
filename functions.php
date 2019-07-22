@@ -124,6 +124,8 @@ function nautilus_scripts() {
 
 	wp_enqueue_style( 'semantic-style', get_template_directory_uri() . '/semantic-ui/semantic.min.css' );
 
+	wp_enqueue_style( 'tachyons-style', get_template_directory_uri() . '/tachyons/tachyons.min.css' );
+
 	wp_enqueue_style( 'nautilus-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'semantic-script', get_template_directory_uri() . '/semantic-ui/semantic.min.js', array('jquery'), false, true );

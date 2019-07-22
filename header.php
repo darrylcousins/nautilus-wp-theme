@@ -43,6 +43,8 @@
 			echo $title;
 			echo '</a>';
 		endforeach;
+    echo '<a class="item" href="contact"><i class="linkify icon"></i>Contact</a>';
+    echo '<a class="item" href="signin"><i class="sign in icon"></i>Sign In</a>';
 		echo '</div>';
 	else :
 		echo '<div class="ui error message"><p>Menu "' . $menu_name . '" not defined.</p></div>';
@@ -68,6 +70,7 @@
 			echo $title;
 			echo '</a>';
 		endforeach;
+    echo '<a class="item" href="contact"><i class="linkify icon"></i>Contact</a>';
 
     echo nautilus_search_form();
 
@@ -78,7 +81,7 @@
 ?>
 
 <div class="pusher">
-  <div class="ui inverted vertical center aligned segment" style="padding-top: 65px">
+  <div class="ui inverted vertical center aligned segment" style="padding-top: 50px">
     <div id="branding" class="ui container">
       <h1 class="ui huge inverted left aligned header">
         <div class="icon large">

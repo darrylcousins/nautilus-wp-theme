@@ -1,9 +1,6 @@
 Nautilus Braids WordPress Theme
 ===============================
 
-Notes
------
-
 ### 2019 July 14
 
 * requested sandbox from server provider
@@ -17,12 +14,19 @@ Notes
 * communication with Rheel
 * address some details with mobile view
 
+### 2019 July 20
+
+* set editor login for Verna
+* sorted out more details with mobile view and navigation
+* started work on login link
+
 ## TODO
 
-* editor login for Verna
+* editor login for Verna and admin bar ✔
 * login link and form
-* admin bar
-* sort out mobile page header
+* tidy up 404 page
+* tidy up search results
+* distributor login (subscribers in wordpress)
+* sort out mobile page header ✔
 * page footer
-* contact form
-* script update of theme on Bluehost
+* contact plugin and form

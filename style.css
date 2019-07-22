@@ -15,7 +15,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 /* Base link color */
 .link {
-  color: #CD7F32;
+  /* color: #CD7F32; */
 }
 .link .icon {
   margin-left: 1em;
@@ -74,6 +74,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 .subheader .link.menu {
   font-size: 0.8rem;
+  color: #CD7F32;
 }
 @media screen and (min-width: 783px) {
   .subheader .link.menu {
@@ -110,6 +111,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
   }
 }
 
+/* menu item active highlight */
+.ui.inverted.menu .active.item {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
 /* hide header menu items for mobile */
 .ui.fixed.menu a.item:not(.toc) {
   display: none;

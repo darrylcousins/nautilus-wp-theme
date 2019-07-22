@@ -26,6 +26,11 @@ get_header();
       </h1>
     </header>
 
+    <div class="ui icon input container mt4">
+      <input type="text" placeholder="Search...">
+      <i class="circular search link icon"></i>
+    </div>
+
       <div class="ui horizontal divider">
         <?php
           $color = "#343434";

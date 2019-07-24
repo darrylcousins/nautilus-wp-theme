@@ -1,3 +1,4 @@
+<?php
 if ( class_exists( 'WPForms_Template', false ) ) :
 /**
  * Contact
@@ -81,3 +82,4 @@ class WPForms_Template_contact extends WPForms_Template {
 }
 new WPForms_Template_contact;
 endif;
+?>

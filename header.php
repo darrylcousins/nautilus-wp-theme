@@ -43,7 +43,7 @@
 			echo $title;
 			echo '</a>';
 		endforeach;
-    echo '<a class="item" href="/404.php"><i class="linkify icon"></i>Contact</a>';
+    echo '<a class="item" href="/contact"><i class="linkify icon"></i>Contact</a>';
     echo nautilus_current_user();
 		echo '</div>';
 	else :

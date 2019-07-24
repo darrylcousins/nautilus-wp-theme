@@ -164,9 +164,38 @@ if ( ! function_exists( 'nautilus_search_form' ) ) :
           </div>
         </form>
       </div>
-      <a class="item" href="/404.php"><i class="sign in icon"></i>Sign In</a>
+      <?php nautilus_current_user(); ?>
     </div>
 		<?php
+
+	}
+endif;
+
+if ( ! function_exists( 'nautilus_current_user' ) ) :
+	/**
+	 * Displays sign in button or user name with log out
+	 *
+	 */
+	function nautilus_current_user() {
+
+    $user = wp_get_current_user();
+    if ( $user->exists() ) :
+    ?>
+      <a class="item" href="<?php echo wp_logout_url( get_permalink() ); ?>">
+        <i class="sign out icon"></i>
+        Sign Out
+      </a>
+      <span class="item">
+        <i class="user icon"></i>
+        <?php echo sprintf('%1$s %2$s', $user->first_name, $user->last_name); ?>
+      </span>
+    <?php
+    else :
+    ?>
+      <a class="item" href="<?php echo wp_login_url( get_permalink() ); ?>">
+        <i class="sign in icon"></i>Sign In</a>
+    <?php
+    endif;
 
 	}
 endif;

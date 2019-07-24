@@ -42,8 +42,9 @@ add_action( 'wp_head', 'nautilus_pingback_header' );
  * * This function is attached to the 'admin_init' action hook.
  * */
 function redirect_non_admin_users() {
-  if ( ! current_user_can( 'manage_options' ) && ('/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF']) ) {
-    wp_redirect( home_url() );
+  $user = wp_get_current_user();
+  if ( ! $user->has_cap( 'publish_posts' ) && ('/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF']) ) {
+    //wp_redirect( home_url() );
     exit;
   }
 }

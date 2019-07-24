@@ -170,3 +170,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Add Custom Template File
+include_once( get_stylesheet_directory() . '/wpforms-contact-template.php' );

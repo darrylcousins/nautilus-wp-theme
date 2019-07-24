@@ -4,7 +4,7 @@ if ( class_exists( 'WPForms_Template', false ) ) :
  * Contact
  * Template for WPForms.
  */
-class WPForms_Template_contact extends WPForms_Template {
+class WPForms_Template_Nautilus_Contact extends WPForms_Template {
 
 	/**
 	 * Primary class constructor.
@@ -80,6 +80,6 @@ class WPForms_Template_contact extends WPForms_Template {
 );
 	}
 }
-new WPForms_Template_contact;
+new WPForms_Template_Nautilus_Contact;
 endif;
 ?>

@@ -18,6 +18,9 @@ get_header();
           <h1 class="ui center aligned header huge">
             <?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'nautilus' ); ?>
           </h1>
+          <div>
+            <?php esc_html_e( 'Nothing found at this location. Maybe try a search?', 'nautilus' ); ?>
+          </div>
 				</header><!-- .page-header -->
 
 				<div class="page-content">

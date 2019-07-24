@@ -20,13 +20,21 @@ Nautilus Braids WordPress Theme
 * sorted out more details with mobile view and navigation
 * started work on login link
 
+### 2019 July 24
+
+* login/user links in header
+* worked up search form for search results and 404 page
+* added contact form
+* started work on distributor only section
+
 ## TODO
 
-* editor login for Verna and admin bar ✔
-* login link and form
-* tidy up 404 page
 * tidy up search results
 * distributor login (subscribers in wordpress)
-* sort out mobile page header ✔
 * page footer
-* contact plugin and form
+
+* editor login for Verna and admin bar ✔
+* login link and form ✔
+* tidy up 404 page ✔
+* sort out mobile page header ✔
+* contact plugin and form ✔

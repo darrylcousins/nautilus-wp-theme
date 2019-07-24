@@ -70,7 +70,7 @@
 			echo $title;
 			echo '</a>';
 		endforeach;
-    echo '<a class="item" href="/404.php"><i class="linkify icon"></i>Contact</a>';
+    echo '<a class="item" href="/contact.php"><i class="linkify icon"></i>Contact</a>';
 
     echo nautilus_search_form();
 

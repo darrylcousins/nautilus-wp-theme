@@ -72,7 +72,7 @@
 		endforeach;
     echo '<a class="item" href="/contact"><i class="linkify icon"></i>Contact</a>';
 
-    echo nautilus_search_form();
+    echo nautilus_header_search_form();
 
 		echo '</div></div>';
 	else :

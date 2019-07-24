@@ -25,10 +25,7 @@ get_header();
 
 				<div class="page-content">
 
-          <div class="ui icon input container mt4">
-            <input type="text" placeholder="Search...">
-            <i class="circular search link icon"></i>
-          </div>
+        <?php echo nautilus_content_search_form(); ?>
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->

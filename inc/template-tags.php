@@ -147,17 +147,17 @@ if ( ! function_exists( 'nautilus_post_thumbnail' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'nautilus_search_form' ) ) :
+if ( ! function_exists( 'nautilus_header_search_form' ) ) :
 	/**
-	 * Displays search form
+	 * Displays search form for header menu
 	 *
 	 */
-	function nautilus_search_form() {
+	function nautilus_header_search_form() {
 
     ?>
 		<div class="right menu">
       <div class="item">
-        <form role="search" method="get" id="searchform" action="/">
+        <form role="search" method="get" id="headersearchform" action="/">
           <div class="ui icon inverted transparent input">
             <input type="text" name="s" id="s" placeholder="Search...">
             <i class="search link icon"></i>
@@ -166,6 +166,28 @@ if ( ! function_exists( 'nautilus_search_form' ) ) :
       </div>
       <?php nautilus_current_user(); ?>
     </div>
+		<?php
+
+	}
+endif;
+
+if ( ! function_exists( 'nautilus_content_search_form' ) ) :
+	/**
+	 * Displays search form for header menu
+	 *
+	 */
+	function nautilus_content_search_form() {
+
+    ?>
+      <div class="ui container mt4">
+        <form role="search" method="get" id="contentsearchform" action="/">
+          <div class="ui fluid icon input">
+            <input type="text" name="s" id="s" placeholder="Search...">
+            <i class="search link icon"></i>
+          </div>
+        </form>
+      </div>
+
 		<?php
 
 	}

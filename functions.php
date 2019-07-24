@@ -182,5 +182,7 @@ add_action ('admin_init','add_sub_caps');
 function add_sub_caps() {
   global $wp_roles;
   $role = get_role('subscriber');
-  $role->add_cap('read_private_posts');
+  if ( !$role->has_cap('read_private_posts') ) {
+    $role->add_cap('read_private_posts');
+  }
 }

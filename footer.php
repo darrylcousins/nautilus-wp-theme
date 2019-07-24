@@ -61,8 +61,12 @@
 <script type="text/javascript">
 jQuery(document).ready(function () {
   jQuery('.ui.sidebar').sidebar('attach events', '.toc.item');
-  jQuery('.search.link.icon').click(function() {
-    var form = jQuery('form#searchform');
+  jQuery('#headersearchform > .input > .search.link.icon').click(function() {
+    var form = jQuery('form#headersearchform');
+    form.submit();
+  });
+  jQuery('#contentsearchform > .input > .search.link.icon').click(function() {
+    var form = jQuery('form#contentsearchform');
     form.submit();
   });
 });

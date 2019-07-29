@@ -1,1 +1,6 @@
-semantic-ui
+semantic.json
+semantic/*.js
+semantic/src
+semantic/tasks
+package-lock.json
+node_modules

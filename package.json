@@ -1,0 +1,10 @@
+{
+  "name": "Nautilus Semantic",
+  "version": "0.0.1",
+  "description": "Nautilus Braids theme",
+  "title": "Nautilus Semantic",
+  "dependencies": {
+    "semantic-ui": "^2.4.2",
+    "semantic-ui-css": "file:semantic-ui"
+  }
+}

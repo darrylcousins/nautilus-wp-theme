@@ -21,6 +21,12 @@ Theme for Nautilus Braids
 2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
+== Semantic UI ==
+
+  npm install semantic-ui --save
+  cd semantic
+  gulp build
+
 == Frequently Asked Questions ==
 
 = Does this theme support any plugins? =

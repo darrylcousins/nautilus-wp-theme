@@ -15,46 +15,70 @@
 	</div><!-- #pusher -->
 
 <div class="ui inverted vertical segment">
+  <div class="ui container">
+    <div class="ui three column inverted divided stackable grid">
+      <div class="row">
+        <div class="column">
 <?php
 	$menu_name = 'footer-menu'; // this is the registered menu name
 
 	if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) :
 		$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
 		$menu_items = wp_get_nav_menu_items($menu->term_id);
-		echo '<div class="ui inverted menu">';
+		echo '<div class="ui inverted vertical text menu">';
 		foreach ( (array) $menu_items as $key => $menu_item ) :
 			$title = $menu_item->title;
 			$url = $menu_item->url;
 			$class = $menu_item->classes; // get array with class names
 			if ( get_the_ID() == $menu_item->object_id ) { // check for current page
-				echo '<a class="item active" href="' . $url . '">';
+				echo '<span class="item"><a class="ui link active" href="' . $url . '">';
 			} else {
-				echo '<a class="item" href="' . $url . '">';
+				echo '<span class="item"><a class="ui link" href="' . $url . '">';
 			}
 			echo $title;
-			echo '</a>';
+			echo '</a></span>';
 		endforeach;
-		echo '</div>';
 	else :
 		echo '<div class="ui error message"><p>Menu "' . $menu_name . '" not defined.</p></div>';
 	endif;
 ?>
-		<div class="ui container site-info">
-				<?php
-				printf( esc_html__( 'Powered by ', 'nautilus' ));
-				?>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'nautilus' ) ); ?>"
-			   class="link">WordPress</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-          printf( esc_html__( 'Theme: %1$s by %2$s.', 'nautilus' ),
-            '<a class="nautilusblue" href="https://github.com/darrylcousins/nautilus-wp-theme">Nautilus</a>',
-            '<a class="link" href="https://github.com/darrylcousins">Darryl Cousins</a>'
-          );
-				?>
-		</div><!-- .site-info -->
-</div>
+          </div><!-- end menu -->
+        </div><!-- end column -->
+        <div class="column">
+        <div class="ui inverted vertical text menu">
+          <span class="item">
+            <a class="ui link" href="mailto:rope@nautilusbraids.co.nz">
+              <i class="mail icon"></i>
+                    rope@nautilusbraids.co.nz
+            </a>
+          </span>
+          <span class="item">
+            <a class="ui link" href="tel:033295857">
+              <i class="phone icon"></i>
+                    03 329 5857
+            </a>
+          </span>
+        </div><!-- end menu -->
+      </div><!-- end column -->
+      <div class="column">
+        <div class="ui inverted vertical text menu">
+          <span class="item">
+            Powered by
+            <a href="https://wordpress.org/"
+               class="ui link">WordPress</a>
+          </span>
+          <span class="item">
+            Theme 
+              <a class="nautilusblue" href="https://github.com/darrylcousins/nautilus-wp-theme">Nautilus</a>
+            by
+              <a class="ui link" href="https://github.com/darrylcousins">Darryl Cousins</a>
+          </span>
+        </div><!-- menu -->
+        </div><!-- end column -->
+      </div><!-- end row -->
+    </div><!-- end grid -->
+  </div><!-- end container -->
+</div><!-- end segment -->
 
 <?php wp_footer(); ?>
 

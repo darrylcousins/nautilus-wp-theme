@@ -122,13 +122,13 @@ add_action( 'widgets_init', 'nautilus_widgets_init' );
  */
 function nautilus_scripts() {
 
-	wp_enqueue_style( 'semantic-style', get_template_directory_uri() . '/semantic-ui/semantic.min.css' );
+	wp_enqueue_style( 'semantic-style', get_template_directory_uri() . '/semantic/dist/semantic.min.css' );
 
 	wp_enqueue_style( 'tachyons-style', get_template_directory_uri() . '/tachyons/tachyons.min.css' );
 
 	wp_enqueue_style( 'nautilus-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'semantic-script', get_template_directory_uri() . '/semantic-ui/semantic.min.js', array('jquery'), false, true );
+	wp_enqueue_script( 'semantic-script', get_template_directory_uri() . '/semantic/dist/semantic.min.js', array('jquery'), false, true );
 /*
 	wp_enqueue_style( 'nautilus-style', get_stylesheet_uri() );
 

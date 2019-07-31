@@ -160,7 +160,7 @@ if ( ! function_exists( 'nautilus_header_search_form' ) ) :
         <form role="search" method="get" id="headersearchform" action="/">
           <div class="ui icon inverted transparent input">
             <input type="text" name="s" id="s" placeholder="Search...">
-            <i class="search link icon"></i>
+            <i class="search icon"></i>
           </div>
         </form>
       </div>

@@ -27,6 +27,11 @@ Nautilus Braids WordPress Theme
 * added contact form
 * started work on distributor only section
 
+### 2019 July 29 (2 hrs)
+
+* work up footer
+* locally install less/gulp for semantic-ui theming
+
 ## TODO
 
 * tidy up search results

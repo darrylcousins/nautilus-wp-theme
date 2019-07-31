@@ -568,7 +568,7 @@ body {
   padding: 0px;
   overflow-x: hidden;
   min-width: 320px;
-  background: #FCFCFC;
+  background: #FFFFFF;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.4285em;
@@ -19155,7 +19155,7 @@ ol.ui.horizontal.list li:before,
 
 .ui.inverted.segment,
 .ui.primary.inverted.segment {
-  background: #1B1C1D;
+  background: #2185D0;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -37246,7 +37246,7 @@ body.pushable {
 }
 
 body.pushable > .pusher {
-  background: #FCFCFC;
+  background: #FFFFFF;
 }
 
 /* Pusher should inherit background from context */

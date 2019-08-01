@@ -31,9 +31,9 @@
 			$url = $menu_item->url;
 			$class = $menu_item->classes; // get array with class names
 			if ( get_the_ID() == $menu_item->object_id ) { // check for current page
-				echo '<span class="item"><a class="ui link active" href="' . $url . '">';
+				echo '<span class="item"><a class="ui active" href="' . $url . '">';
 			} else {
-				echo '<span class="item"><a class="ui link" href="' . $url . '">';
+				echo '<span class="item"><a class="ui " href="' . $url . '">';
 			}
 			echo $title;
 			echo '</a></span>';
@@ -71,7 +71,7 @@
             Theme 
               <a class="nautilusblue" href="https://github.com/darrylcousins/nautilus-wp-theme">Nautilus</a>
             by
-              <a class="ui link" href="https://github.com/darrylcousins">Darryl Cousins</a>
+              <a class="ui" href="https://github.com/darrylcousins">Darryl Cousins</a>
           </span>
         </div><!-- menu -->
         </div><!-- end column -->

@@ -33,7 +33,7 @@
 			if ( get_the_ID() == $menu_item->object_id ) { // check for current page
 				echo '<span class="item"><a class="ui active" href="' . $url . '">';
 			} else {
-				echo '<span class="item"><a class="ui" href="' . $url . '">';
+				echo '<span class="item"><a class="ui " href="' . $url . '">';
 			}
 			echo $title;
 			echo '</a></span>';

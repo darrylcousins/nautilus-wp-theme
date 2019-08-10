@@ -104,13 +104,16 @@
             <?php echo get_bloginfo('description'); ?>
           </div>
           <div class="subheader">
-              <a class="link tiny menu" href="mailto:rope@nautilusbraids.co.nz">
+              <a class="link menu" href="mailto:rope@nautilusbraids.co.nz">
                 <i class="mail icon"></i>
                       rope@nautilusbraids.co.nz
               </a>
-              <a class="link tiny menu" href="tel:033295857">
+              <a class="link menu" href="tel:033295857">
                 <i class="phone icon"></i>
                       03 329 5837
+              </a>
+              <a class="link menu" href="https://www.facebook.com/nautilus.braids.7">
+                <i class="facebook square icon"></i>
               </a>
           </div>
         </div>

@@ -118,4 +118,4 @@
     </div>
   </div>
 
-  <div id="content" class="ui main text container">
+  <div id="content" class="ui main container">

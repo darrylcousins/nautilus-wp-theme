@@ -44,6 +44,7 @@
 			echo '</a>';
 		endforeach;
     echo '<a class="item" href="/contact"><i class="linkify icon"></i>Contact</a>';
+
     echo nautilus_current_user();
 		echo '</div>';
 	else :
@@ -72,7 +73,11 @@
 		endforeach;
     echo '<a class="item" href="/contact"><i class="linkify icon"></i>Contact</a>';
 
+    echo '<a class="item" target="_blank" href="https://www.facebook.com/nautilus.braids.7">';
+    echo '<i class="facebook square icon"></i></a>';
+
     echo nautilus_header_search_form();
+    echo nautilus_current_user();
 
 		echo '</div></div>';
 	else :
@@ -111,9 +116,6 @@
               <a class="link menu" href="tel:033295857">
                 <i class="phone icon"></i>
                       03 329 5837
-              </a>
-              <a class="link menu" href="https://www.facebook.com/nautilus.braids.7">
-                <i class="facebook square icon"></i>
               </a>
           </div>
         </div>

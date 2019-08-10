@@ -58,6 +58,12 @@
                     03 329 5837
             </a>
           </span>
+          <span class="item">
+            <a class="ui link" target="_blank" href="https://www.facebook.com/nautilus.braids.7">
+              <i class="facebook square icon"></i>
+            </a>
+          </span>
+
         </div><!-- end menu -->
       </div><!-- end column -->
       <div class="column">

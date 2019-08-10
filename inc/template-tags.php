@@ -164,7 +164,6 @@ if ( ! function_exists( 'nautilus_header_search_form' ) ) :
           </div>
         </form>
       </div>
-      <?php nautilus_current_user(); ?>
     </div>
 		<?php
 
@@ -209,7 +208,7 @@ if ( ! function_exists( 'nautilus_current_user' ) ) :
       </a>
       <span class="item">
         <i class="user icon"></i>
-        <?php echo sprintf('%1$s %2$s', $user->first_name, $user->last_name); ?>
+        <?php echo $user->first_name; ?>
       </span>
     <?php
     else :

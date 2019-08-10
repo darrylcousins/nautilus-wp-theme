@@ -101,7 +101,7 @@
         <div class="pageheader content">
                 <?php echo get_bloginfo('name'); ?>
           <div class="sub header nautilusblue">
-            <?php echo get_bloginfo('description'); ?>
+            <i><?php echo get_bloginfo('description'); ?></i>
           </div>
           <div class="subheader">
               <a class="link menu" href="mailto:rope@nautilusbraids.co.nz">

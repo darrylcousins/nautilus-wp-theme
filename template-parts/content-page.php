@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
       <?php if ( !is_front_page() ) : ?>
-          <?php the_title( '<h1 class="">', '</h1>' ); ?>
+          <?php the_title( '<h1 class="ui header huge dividing">', '</h1>' ); ?>
       <?php endif; ?>
     </header><!-- .entry-header -->
 

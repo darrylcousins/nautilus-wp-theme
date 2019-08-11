@@ -12,9 +12,6 @@ Text Domain: nautilus
 nautilus-wp-theme is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
-.alignleft {
-  float: left;
-}
 /* Base link color */
 .link {
   color: #CD7F32;
@@ -29,6 +26,10 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 /* make things small */
 .tiny {
   font-size: 1rem;
+}
+/* page heading */
+h1.ui.header.huge.dividing {
+  margin-bottom: 1em !important;
 }
 /* page branding icon */
 .ui.header>.icon.large {
@@ -71,10 +72,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 }
 /* page branding subheader menu */
 .subheader {
-  margin-top: -20px;
+  margin-top: -10px;
   margin-left: -7px;
 }
 .subheader .link.menu {
+  font-family: 'Lato';
   font-size: 0.9rem;
   color: #CD7F32;
 }

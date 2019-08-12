@@ -147,3 +147,6 @@ a#toc {
     margin-top: 32px;
   }
 }
+.advgb-accordion-header h4.advgb-accordion-header-title, .advgb-accordion-header h4 {
+  font-size: 1.7rem;
+}

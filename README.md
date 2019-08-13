@@ -48,10 +48,9 @@ Nautilus Braids WordPress Theme
 
 ## TODO
 
-* tidy up search results
 * distributor login (subscribers in wordpress)
-* page footer
-
+* tidy up search results ✔
+* page footer ✔
 * editor login for Verna and admin bar ✔
 * login link and form ✔
 * tidy up 404 page ✔

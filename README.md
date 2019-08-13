@@ -32,6 +32,20 @@ Nautilus Braids WordPress Theme
 * work up footer
 * locally install less/gulp for semantic-ui theming
 
+### 2019 August 10 (6 hrs)
+
+* shift focus to learning how to use the Gutenberg block editor and available plugins with the view to putting as many tools into client's hands as possible.
+* found some workable plugins, worked up a sandbox page to demonstrate.
+
+### 2019 August 12 (2 hrs)
+
+* look at current content and what I could do with it.
+
+### 2019 August 13 (2 hrs)
+
+* fresh Wordpress install now available on Nautilus Braid's host server
+* set up site and start migrating content
+
 ## TODO
 
 * tidy up search results

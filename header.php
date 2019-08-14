@@ -89,7 +89,6 @@
 
   <div class="ui inverted segment">
     <div class="ui stackable column grid"
-       style="padding-top: 55px"
        id="site-branding">
       <div class="twelve wide column">
         <h1 class="ui huge inverted left aligned header">
@@ -116,7 +115,7 @@
         </h1>
       </div>
       <div id="site-contact" class="floated right aligned four wide column">
-        <div class="ui vertical text fitted menu">
+        <div class="ui vertical text menu">
           <a class="link item" href="mailto:rope@nautilusbraids.co.nz">
                   rope@nautilusbraids.co.nz
             <i class="mail icon"></i>
@@ -124,6 +123,10 @@
           <a class="link item" href="tel:033295857">
                   03 329 5837
             <i class="phone icon"></i>
+          </a>
+          <a class="link item" href="https://www.facebook.com/nautilus.braids.7">
+            facebook
+            <i class="facebook square icon"></i>
           </a>
         </div>
       </div>

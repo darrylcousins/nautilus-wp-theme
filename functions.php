@@ -60,26 +60,6 @@ if ( ! function_exists( 'nautilus_setup' ) ) :
 			'caption',
 		) );
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'nautilus_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
-
-		// Add theme support for selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
-
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'nautilus_setup' );
@@ -98,24 +78,6 @@ function nautilus_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'nautilus_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'nautilus_content_width', 0 );
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function nautilus_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'nautilus' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'nautilus' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'nautilus_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
@@ -170,9 +132,6 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-// Add Custom Template File
-include_once( get_stylesheet_directory() . '/wpforms-contact-template.php' );
 
 /**
  * Add read_private_posts capability to subscriber

@@ -86,40 +86,47 @@
 ?>
 
 <div class="pusher">
-  <div class="ui inverted vertical center aligned segment" style="padding-top: 50px">
-    <div id="branding" class="ui container">
-      <h1 class="ui huge inverted left aligned header">
-        <div class="icon large">
-          <?php
-            $color = "#fafafa";
-            $scale = 1;
-            include get_template_directory() . '/icon.php';
-          ?>
-        </div>
-        <div class="icon small">
-          <?php
-            $color = "#fafafa";
-            $scale = 0.5;
-            include get_template_directory() . '/icon.php';
-          ?>
-        </div>
-        <div class="pageheader content">
-                <?php echo get_bloginfo('name'); ?>
-          <div class="sub header nautilusblue">
-            <i><?php echo get_bloginfo('description'); ?></i>
+
+  <div class="ui inverted segment">
+    <div class="ui stackable column grid"
+       style="padding-top: 55px"
+       id="site-branding">
+      <div class="twelve wide column">
+        <h1 class="ui huge inverted left aligned header">
+          <div class="icon large">
+            <?php
+              $color = "#fafafa";
+              $scale = 1;
+              include get_template_directory() . '/icon.php';
+            ?>
           </div>
-          <div class="subheader">
-              <a class="link menu" href="mailto:rope@nautilusbraids.co.nz">
-                <i class="mail icon"></i>
-                      rope@nautilusbraids.co.nz
-              </a>
-              <a class="link menu" href="tel:033295857">
-                <i class="phone icon"></i>
-                      03 329 5837
-              </a>
+          <div class="icon small">
+            <?php
+              $color = "#fafafa";
+              $scale = 0.5;
+              include get_template_directory() . '/icon.php';
+            ?>
           </div>
+          <div id="site-title" class="pageheader content">
+                  <?php echo get_bloginfo('name'); ?>
+            <div id="site-description" class="sub header nautilusblue">
+              <?php echo get_bloginfo('description'); ?>
+            </div>
+          </div>
+        </h1>
+      </div>
+      <div id="site-contact" class="floated right aligned four wide column">
+        <div class="ui vertical text fitted menu">
+          <a class="link item" href="mailto:rope@nautilusbraids.co.nz">
+                  rope@nautilusbraids.co.nz
+            <i class="mail icon"></i>
+          </a>
+          <a class="link item" href="tel:033295857">
+                  03 329 5837
+            <i class="phone icon"></i>
+          </a>
         </div>
-      </h1>
+      </div>
     </div>
   </div>
 

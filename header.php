@@ -51,6 +51,8 @@
 		echo '<div class="ui error message"><p>Menu "' . $menu_name . '" not defined.</p></div>';
 	endif;
 
+?>
+<?php
   // Following menu
 <div class="ui container">
 
@@ -74,11 +76,10 @@
 		endforeach;
     echo '<a class="item" href="/contact"><i class="linkify icon"></i>Contact</a>';
 
-    echo '<a class="item" target="_blank" href="https://www.facebook.com/nautilus.braids.7">';
-    echo '<i class="facebook square icon"></i></a>';
+    //echo '<a class="item" target="_blank" href="https://www.facebook.com/nautilus.braids.7">';
+    //echo '<i class="facebook square icon"></i></a>';
 
     echo nautilus_header_search_form();
-    echo nautilus_current_user();
 
 		echo '</div></div>';
 	else :
@@ -117,7 +118,7 @@
         </h1>
       </div>
       <div id="site-contact" class="floated right aligned four wide column">
-        <div class="ui vertical text fitted menu">
+        <div class="ui vertical text menu">
           <a class="link item" href="mailto:rope@nautilusbraids.co.nz">
                   rope@nautilusbraids.co.nz
             <i class="mail icon"></i>
@@ -125,6 +126,10 @@
           <a class="link item" href="tel:033295857">
                   03 329 5837
             <i class="phone icon"></i>
+          </a>
+          <a class="link item" href="https://www.facebook.com/nautilus.braids.7">
+            facebook
+            <i class="facebook square icon"></i>
           </a>
         </div>
       </div>

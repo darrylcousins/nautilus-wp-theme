@@ -16,16 +16,9 @@
       <?php endif; ?>
     </header><!-- .entry-header -->
 
-	<?php nautilus_post_thumbnail(); ?>
-
-	<div class="entry-content">
+	<div class="entry-content" style="padding-top: 2em;">
 		<?php
 		the_content();
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'nautilus' ),
-			'after'  => '</div>',
-		) );
 		?>
 	</div><!-- .entry-content -->
 

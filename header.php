@@ -51,6 +51,8 @@
 		echo '<div class="ui error message"><p>Menu "' . $menu_name . '" not defined.</p></div>';
 	endif;
 
+?>
+<?php
   // Following menu
 
 	if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) :
@@ -73,11 +75,10 @@
 		endforeach;
     echo '<a class="item" href="/contact"><i class="linkify icon"></i>Contact</a>';
 
-    echo '<a class="item" target="_blank" href="https://www.facebook.com/nautilus.braids.7">';
-    echo '<i class="facebook square icon"></i></a>';
+    //echo '<a class="item" target="_blank" href="https://www.facebook.com/nautilus.braids.7">';
+    //echo '<i class="facebook square icon"></i></a>';
 
     echo nautilus_header_search_form();
-    echo nautilus_current_user();
 
 		echo '</div></div>';
 	else :

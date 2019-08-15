@@ -15,8 +15,8 @@
 	</div><!-- #pusher -->
 
 <div class="ui inverted vertical segment">
-  <div class="ui container">
-    <div class="ui three column inverted divided stackable grid">
+  <div>
+    <div class="ui container three column inverted divided stackable grid">
       <div class="row">
         <div class="column">
 <?php
@@ -31,9 +31,9 @@
 			$url = $menu_item->url;
 			$class = $menu_item->classes; // get array with class names
 			if ( get_the_ID() == $menu_item->object_id ) { // check for current page
-				echo '<span class="item"><a class="ui active" href="' . $url . '">';
+				echo '<span class="item"><a class="ui active nautilusblue" href="' . $url . '">';
 			} else {
-				echo '<span class="item"><a class="ui" href="' . $url . '">';
+				echo '<span class="item"><a class="ui nautilusblue" href="' . $url . '">';
 			}
 			echo $title;
 			echo '</a></span>';
@@ -49,18 +49,19 @@
           <span class="item">
             <a class="ui link" href="mailto:rope@nautilusbraids.co.nz">
               <i class="mail icon"></i>
-                    rope@nautilusbraids.co.nz
+              rope@nautilusbraids.co.nz
             </a>
           </span>
           <span class="item">
             <a class="ui link" href="tel:033295857">
               <i class="phone icon"></i>
-                    03 329 5837
+              03 329 5837
             </a>
           </span>
           <span class="item">
             <a class="ui link" target="_blank" href="https://www.facebook.com/nautilus.braids.7">
               <i class="facebook square icon"></i>
+              facebook
             </a>
           </span>
 
@@ -69,17 +70,15 @@
       <div class="column">
         <div class="ui inverted vertical text menu">
           <span class="item">
-            Powered by
+            Powered by:
             <a href="https://wordpress.org/"
                class="ui link">WordPress</a>
           </span>
           <span class="item">
-            Theme 
-              <a class="nautilusblue" href="https://github.com/darrylcousins/nautilus-wp-theme">Nautilus</a>
-            by
-              <a class="ui" href="https://github.com/darrylcousins">Darryl Cousins</a>
+            Theme: <a class="nautilusblue" href="https://github.com/darrylcousins/nautilus-wp-theme">Nautilus</a>
           </span>
         </div><!-- menu -->
+        <?php echo nautilus_current_user(); ?>
         </div><!-- end column -->
       </div><!-- end row -->
     </div><!-- end grid -->

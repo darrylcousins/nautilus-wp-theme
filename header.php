@@ -52,6 +52,7 @@
 	endif;
 
   // Following menu
+<div class="ui container">
 
 	if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) :
 		$menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
@@ -84,12 +85,12 @@
 		echo '<div class="ui error message"><p>Menu "' . $menu_name . '" not defined.</p></div>';
 	endif;
 ?>
+</div>
 
 <div class="pusher">
 
   <div class="ui inverted segment">
     <div class="ui stackable column grid"
-       style="padding-top: 55px"
        id="site-branding">
       <div class="twelve wide column">
         <h1 class="ui huge inverted left aligned header">
